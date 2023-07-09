@@ -9,10 +9,10 @@ const selectors = {
 selectors.buttonSubmit.addEventListener('click', handlerUpdateUserInput);
 selectors.form.addEventListener('submit', handlerUpdateUserInput);
 
-function handlerUpdateUserInput(evt) {
-  evt.preventDefault();
+function handlerUpdateUserInput(event) {
+  event.preventDefault();
 
-  const { delay, step, amount } = evt.target.form;
+  const { delay, step, amount } = event.target.form;
 
   const firstInputDelay = parseInt(delay.value);
   const inputStep = parseInt(step.value);
